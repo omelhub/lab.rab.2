@@ -9,8 +9,8 @@ namespace lab.rab._2;
 public class MedicalCenter
 {
     public List<Institute> institutes = new();
-    public event AlarmHandler? Alarm;
     public delegate void AlarmHandler(object sendler, AlarmEventArgs args);
+    public event AlarmHandler? Alarm;
 
     public MedicalCenter()
     {
@@ -21,6 +21,7 @@ public class MedicalCenter
         foreach (Institute institute in institutes)
         {
             Alarm += institute.MedicalCenter_Alarm;
+
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(institute.Name);
             Console.ResetColor();
