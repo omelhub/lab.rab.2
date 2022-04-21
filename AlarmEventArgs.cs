@@ -8,9 +8,9 @@ namespace lab.rab._2;
 
 public class AlarmEventArgs : EventArgs
 {
-    public string InstituteName { set; get; }
-    public string GroupName { get; set; }
-    public string StudentName { get; }
+    public string? InstituteName { set; get; }
+    public string? GroupName { get; set; }
+    public string? StudentName { get; }
 
     public AlarmEventArgs(Student student, Institute institute)
     {
